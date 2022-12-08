@@ -3,24 +3,36 @@ import ReactDom from 'react-dom'
 // CSS import
 import './index.css'
 
-// Nested Components, React Tools
+
+// Setup variables
+const firstBook = {
+  img: 'https://m.media-amazon.com/images/I/51uYhoxbcqL._AC_SY135_.jpg',
+  title: 'Network+',
+  author: 'Beau Dedmond'
+
+}
+const secondBook = {
+ title: 'Security+',
+ author: 'Jordan Cozart',
+ img: 'https://m.media-amazon.com/images/I/41gsBLfjtkL._AC_SY135_.jpg'
+}
 
 function BookList(){
   return (
     <section className='booklist'>
-      <Book/>
+      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
+      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
     </section>
   )
 }
 
-const Book = () => {
-  const title = 'Security+'
-  const author = 'Jordan Cozart'
+const Book = (props) => {
+  console.log(props)
   return ( 
     <article className='book'>
-      <img src='https://m.media-amazon.com/images/I/41gsBLfjtkL._AC_SY135_.jpg' alt=''/>
-      <h1>{title}</h1>
-      <h4>{author}</h4>
+      <img src={props.img} alt=''/>
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
     </article>
   )
 }
