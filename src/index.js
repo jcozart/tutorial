@@ -43,7 +43,7 @@ const Title = () => {
 
 const Author = () => {
   return (
-    <h4>Jordan Cozart</h4>
+    <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Jordan Cozart</h4>
   )
 }
 
