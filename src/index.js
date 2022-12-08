@@ -9,41 +9,19 @@ function BookList(){
   return (
     <section className='booklist'>
       <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
     </section>
   )
 }
 
 const Book = () => {
+  const title = 'Security+'
+  const author = 'Jordan Cozart'
   return ( 
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img src='https://m.media-amazon.com/images/I/41gsBLfjtkL._AC_SY135_.jpg' alt=''/>
+      <h1>{title}</h1>
+      <h4>{author}</h4>
     </article>
-  )
-}
-
-const Image = () => {
-  return (
-    <img src='https://m.media-amazon.com/images/I/41gsBLfjtkL._AC_SY135_.jpg' alt=''/>
-  )
-}
-
-const Title = () => {
-  return (
-    <h1>Security+</h1>
-  )
-}
-
-const Author = () => {
-  return (
-    <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Jordan Cozart</h4>
   )
 }
 
